@@ -1,86 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chronologie des Douze Maisons — Chevaliers d’Or</title>
+  <meta name="description" content="Revivez l’ascension des héros à travers chaque temple du Sanctuaire." />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0B1023; --fg:#F8FAFC; --gold:#D4AF37; --muted:#94A3B8; }
+    *{box-sizing:border-box} 
+    body{margin:0;background:radial-gradient(80% 80% at 50% 20%,#1D2B64 0%,#0B1023 60%,#050814 100%);color:var(--fg);font-family:Inter,system-ui}
+    a{color:var(--gold);text-decoration:none}
+    header{min-height:40vh;display:grid;place-items:center;text-align:center;padding:3rem 1rem}
+    h1{font-family:Cinzel,serif;font-size: clamp(2.2rem,6vw,3.5rem);letter-spacing:.04em}
+    .subtitle{color:var(--muted);max-width:60ch;margin:.75rem auto 2rem}
+    nav{background:#111827;padding:.5rem;text-align:center}
+    nav a{margin:0 1rem;color:var(--gold);font-weight:600}
+    main{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    ol{list-style:decimal;color:var(--gold);padding-left:1.5rem}
+    li{margin:.75rem 0;padding:.5rem;border-bottom:1px solid rgba(212,175,55,.25)}
+    li span{color:var(--fg)}
+    footer{padding:2rem 1rem;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.08)}
+  </style>
+</head>
+<body>
+  <!-- Menu de navigation -->
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="Landing%20statique%20%C3%A9pique.html">Landing épique</a>
+    <a href="chronologie%20des%20douze%20maisons.htm">Chronologie</a>
+  </nav>
 
-<main id="maisons" class="grid" aria-label="Maisons du Zodiaque">
-  <article class="card">
-    <h3>Bélier — Mū</h3>
-    <p class="meta">Crystal Wall • Starlight Extinction</p>
-    <blockquote>“Réparer, c’est comprendre.”</blockquote>
-    <a class="btn" href="details/belier.html">Voir détails</a>
-  </article>
+  <header>
+    <div>
+      <h1>Chronologie des Douze Maisons</h1>
+      <p class="subtitle">Revivez l’ascension des Chevaliers de Bronze à travers chaque temple du Sanctuaire.</p>
+    </div>
+  </header>
 
-  <article class="card">
-    <h3>Taureau — Aldebaran</h3>
-    <p class="meta">Great Horn</p>
-    <blockquote>“La force soutient la justice.”</blockquote>
-    <a class="btn" href="details/taureau.html">Voir détails</a>
-  </article>
+  <main>
+    <h2>Les étapes du parcours</h2>
+    <ol>
+      <li><span>Bélier — Mū</span> : Le gardien réparateur des armures.</li>
+      <li><span>Taureau — Aldebaran</span> : La force brute qui teste la détermination.</li>
+      <li><span>Gémeaux — Saga</span> : La dualité entre lumière et ténèbres.</li>
+      <li><span>Cancer — Deathmask</span> : Le passage vers le monde des morts.</li>
+      <li><span>Lion — Aiolia</span> : Le courage flamboyant face à l’injustice.</li>
+      <li><span>Vierge — Shaka</span> : La sagesse et l’éveil spirituel.</li>
+      <li><span>Balance — Dōko</span> : Le juge équitable des armes sacrées.</li>
+      <li><span>Scorpion — Milo</span> : Les piqûres du Scarlet Needle.</li>
+      <li><span>Sagittaire — Aiolos</span> : Le protecteur légendaire du futur.</li>
+      <li><span>Capricorne — Shura</span> : L’épée Excalibur qui tranche le destin.</li>
+      <li><span>Verseau — Camus</span> : Le froid glacial qui teste la volonté.</li>
+      <li><span>Poissons — Aphrodite</span> : La beauté mortelle des roses démoniaques.</li>
+    </ol>
+  </main>
 
-  <article class="card">
-    <h3>Gémeaux — Saga</h3>
-    <p class="meta">Galaxian Explosion • Another Dimension</p>
-    <blockquote>“La dualité est une épreuve.”</blockquote>
-    <a class="btn" href="details/gemeaux.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Cancer — Deathmask</h3>
-    <p class="meta">Sekishiki Meikaiha</p>
-    <blockquote>“La mort est une arme.”</blockquote>
-    <a class="btn" href="details/cancer.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Lion — Aiolia</h3>
-    <p class="meta">Lightning Plasma</p>
-    <blockquote>“Le courage est lumière.”</blockquote>
-    <a class="btn" href="details/lion.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Vierge — Shaka</h3>
-    <p class="meta">Tenbu Hōrin</p>
-    <blockquote>“La paix naît de la sagesse.”</blockquote>
-    <a class="btn" href="details/vierge.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Balance — Dōko</h3>
-    <p class="meta">1000 Dragons • Armes de la Balance</p>
-    <blockquote>“La justice doit être équilibrée.”</blockquote>
-    <a class="btn" href="details/balance.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Scorpion — Milo</h3>
-    <p class="meta">Scarlet Needle</p>
-    <blockquote>“Chaque coup rapproche de la vérité.”</blockquote>
-    <a class="btn" href="details/scorpion.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Sagittaire — Aiolos</h3>
-    <p class="meta">Arrow of Light</p>
-    <blockquote>“Le sacrifice protège l’avenir.”</blockquote>
-    <a class="btn" href="details/sagittaire.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Capricorne — Shura</h3>
-    <p class="meta">Excalibur</p>
-    <blockquote>“L’épée tranche le destin.”</blockquote>
-    <a class="btn" href="details/capricorne.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Verseau — Camus</h3>
-    <p class="meta">Diamond Dust • Aurora Execution</p>
-    <blockquote>“Le froid révèle la pureté.”</blockquote>
-    <a class="btn" href="details/verseau.html">Voir détails</a>
-  </article>
-
-  <article class="card">
-    <h3>Poissons — Aphrodite</h3>
-    <p class="meta">Royal Demon Rose</p>
-    <blockquote>“La beauté est une arme.”</blockquote>
-    <a class="btn" href="details/poissons.html">Voir détails</a>
-  </article>
-</main>
+  <footer>© Sanctuaire — Chronologie des Douze Maisons</footer>
+</body>
+</html>
