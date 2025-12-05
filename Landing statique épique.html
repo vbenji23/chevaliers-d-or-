@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chevaliers d’Or — Saint Seiya</title>
+  <meta name="description" content="Découvrez les Chevaliers d’Or: constellations, techniques, arcs narratifs et portraits." />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0B1023; --fg:#F8FAFC; --gold:#D4AF37; --muted:#94A3B8; }
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(80% 80% at 50% 20%,#1D2B64 0%,#0B1023 60%,#050814 100%);color:var(--fg);font-family:Inter,system-ui}
+    a{color:var(--gold)} header{min-height:70vh;display:grid;place-items:center;text-align:center;padding:4rem 1rem}
+    h1{font-family:Cinzel,serif;font-size: clamp(2.4rem,6vw,4rem);letter-spacing:.04em}
+    .subtitle{color:var(--muted);max-width:60ch;margin:.75rem auto 2rem}
+    .btn{display:inline-block;padding:.9rem 1.2rem;border:1px solid var(--gold);color:var(--fg);text-decoration:none;position:relative}
+    .btn::after{content:"";position:absolute;inset:0;border:1px solid rgba(212,175,55,.4);filter:blur(4px)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:2rem 1rem;max-width:1100px;margin:0 auto}
+    .card{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.25);padding:1rem;border-radius:12px}
+    .card h3{font-family:Cinzel,serif;margin:0 0 .25rem}
+    .meta{color:var(--muted);font-size:.9rem}
+    footer{padding:2rem 1rem;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.08)}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Chevaliers d’Or du Sanctuaire</h1>
+      <p class="subtitle">Sous le signe des constellations, ils veillent — rapides comme la lumière, fiers comme le soleil.</p>
+      <a class="btn" href="#maisons">Explorer les Maisons</a>
+    </div>
+  </header>
+
+  <main id="maisons" class="grid" aria-label="Maisons du Zodiaque">
+    <article class="card"><h3>Bélier — Mū</h3><p class="meta">Crystal Wall • Starlight Extinction</p></article>
+    <article class="card"><h3>Taureau — Aldebaran</h3><p class="meta">Great Horn</p></article>
+    <article class="card"><h3>Gémeaux — Saga</h3><p class="meta">Galaxian Explosion • Another Dimension</p></article>
+    <article class="card"><h3>Cancer — Deathmask</h3><p class="meta">Sekishiki Meikaiha</p></article>
+    <article class="card"><h3>Lion — Aiolia</h3><p class="meta">Lightning Plasma</p></article>
+    <article class="card"><h3>Vierge — Shaka</h3><p class="meta">Tenbu Hōrin</p></article>
+    <article class="card"><h3>Balance — Dōko</h3><p class="meta">1000 Dragons • Armes de la Balance</p></article>
+    <article class="card"><h3>Scorpion — Milo</h3><p class="meta">Scarlet Needle</p></article>
+    <article class="card"><h3>Sagittaire — Aiolos</h3><p class="meta">Arrow of Light</p></article>
+    <article class="card"><h3>Capricorne — Shura</h3><p class="meta">Excalibur</p></article>
+    <article class="card"><h3>Verseau — Camus</h3><p class="meta">Diamond Dust • Aurora Execution</p></article>
+    <article class="card"><h3>Poissons — Aphrodite</h3><p class="meta">Royal Demon Rose</p></article>
+  </main>
+
+  <footer>© Sanctuaire — Guide des Chevaliers d’Or. Constellations, techniques et arcs narratifs.</footer>
+</body>
+</html>
