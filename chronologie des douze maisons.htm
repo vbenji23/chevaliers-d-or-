@@ -1,51 +1,86 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ascension des Douze Maisons</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body{margin:0;background:#0B1023;color:#E5E7EB;font-family:Inter}
-    .timeline{max-width:900px;margin:0 auto;padding:2rem 1rem}
-    .step{position:relative;padding:1.25rem 1rem 1.25rem 3rem;border-left:2px solid #D4AF37;margin:1rem 0}
-    .step::before{content:attr(data-sign);position:absolute;left:-.95rem;top:.9rem;background:#D4AF37;color:#0B1023;border-radius:999px;padding:.35rem .55rem;font-family:Cinzel;font-size:.9rem}
-    .step h2{font-family:Cinzel;margin:.2rem 0}
-    .tag{display:inline-block;background:#1D2B64;color:#FCE570;border:1px solid rgba(252,229,112,.5);padding:.2rem .5rem;border-radius:6px;font-size:.8rem;margin-right:.4rem}
-    .quote{color:#94A3B8;font-style:italic;margin:.5rem 0}
-    .actions{margin-top:.5rem}
-    button{background:transparent;color:#FCE570;border:1px solid #FCE570;padding:.4rem .6rem;border-radius:8px;cursor:pointer}
-    .modal{position:fixed;inset:0;background:rgba(5,8,20,.75);display:none;align-items:center;justify-content:center}
-    .modal .box{background:#10172A;border:1px solid rgba(212,175,55,.35);color:#E5E7EB;max-width:560px;padding:1rem;border-radius:12px}
-  </style>
-</head>
-<body>
-  <div class="timeline" aria-label="Ascension des Douze Maisons">
-    <section class="step" data-sign="♈">
-      <h2>Bélier — Mū</h2>
-      <span class="tag">Crystal Wall</span> <span class="tag">Starlight Extinction</span>
-      <p class="quote">“Réparer, c’est comprendre.”</p>
-      <div class="actions"><button data-info="Maître des réparations d’armures, défense absolue, contrôle spatial.">Voir détails</button></div>
-    </section>
-    <section class="step" data-sign="♉">
-      <h2>Taureau — Aldebaran</h2>
-      <span class="tag">Great Horn</span>
-      <p class="quote">“La force soutient la justice.”</p>
-      <div class="actions"><button data-info="Puissance frontale, test du courage, respect des combattants.">Voir détails</button></div>
-    </section>
-    <!-- … répéter jusqu’à ♓ … -->
-  </div>
 
-  <div class="modal" role="dialog" aria-modal="true" aria-label="Détails chevalier">
-    <div class="box"><h3>Détails</h3><p id="info"></p><button id="close">Fermer</button></div>
-  </div>
+<main id="maisons" class="grid" aria-label="Maisons du Zodiaque">
+  <article class="card">
+    <h3>Bélier — Mū</h3>
+    <p class="meta">Crystal Wall • Starlight Extinction</p>
+    <blockquote>“Réparer, c’est comprendre.”</blockquote>
+    <a class="btn" href="details/belier.html">Voir détails</a>
+  </article>
 
-  <script>
-    const modal=document.querySelector('.modal'), info=document.getElementById('info'), close=document.getElementById('close');
-    document.body.addEventListener('click', e=>{
-      if(e.target.matches('button[data-info]')){ info.textContent=e.target.getAttribute('data-info'); modal.style.display='flex'; }
-      if(e.target===close || e.target===modal){ modal.style.display='none'; }
-    });
-  </script>
-</body>
-</html>
+  <article class="card">
+    <h3>Taureau — Aldebaran</h3>
+    <p class="meta">Great Horn</p>
+    <blockquote>“La force soutient la justice.”</blockquote>
+    <a class="btn" href="details/taureau.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Gémeaux — Saga</h3>
+    <p class="meta">Galaxian Explosion • Another Dimension</p>
+    <blockquote>“La dualité est une épreuve.”</blockquote>
+    <a class="btn" href="details/gemeaux.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Cancer — Deathmask</h3>
+    <p class="meta">Sekishiki Meikaiha</p>
+    <blockquote>“La mort est une arme.”</blockquote>
+    <a class="btn" href="details/cancer.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Lion — Aiolia</h3>
+    <p class="meta">Lightning Plasma</p>
+    <blockquote>“Le courage est lumière.”</blockquote>
+    <a class="btn" href="details/lion.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Vierge — Shaka</h3>
+    <p class="meta">Tenbu Hōrin</p>
+    <blockquote>“La paix naît de la sagesse.”</blockquote>
+    <a class="btn" href="details/vierge.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Balance — Dōko</h3>
+    <p class="meta">1000 Dragons • Armes de la Balance</p>
+    <blockquote>“La justice doit être équilibrée.”</blockquote>
+    <a class="btn" href="details/balance.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Scorpion — Milo</h3>
+    <p class="meta">Scarlet Needle</p>
+    <blockquote>“Chaque coup rapproche de la vérité.”</blockquote>
+    <a class="btn" href="details/scorpion.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Sagittaire — Aiolos</h3>
+    <p class="meta">Arrow of Light</p>
+    <blockquote>“Le sacrifice protège l’avenir.”</blockquote>
+    <a class="btn" href="details/sagittaire.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Capricorne — Shura</h3>
+    <p class="meta">Excalibur</p>
+    <blockquote>“L’épée tranche le destin.”</blockquote>
+    <a class="btn" href="details/capricorne.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Verseau — Camus</h3>
+    <p class="meta">Diamond Dust • Aurora Execution</p>
+    <blockquote>“Le froid révèle la pureté.”</blockquote>
+    <a class="btn" href="details/verseau.html">Voir détails</a>
+  </article>
+
+  <article class="card">
+    <h3>Poissons — Aphrodite</h3>
+    <p class="meta">Royal Demon Rose</p>
+    <blockquote>“La beauté est une arme.”</blockquote>
+    <a class="btn" href="details/poissons.html">Voir détails</a>
+  </article>
+</main>
