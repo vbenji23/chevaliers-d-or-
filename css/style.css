@@ -14,12 +14,12 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--bg); }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(90% 70% at 50% 0%, #1c2a5e 0%, var(--bg) 60%, #03050e 100%) fixed;
+  background: radial-gradient(90% 70% at 50% 0%, #1c2a5e 0%, var(--bg) 60%, #03050e 100%) fixed var(--bg);
   color: var(--fg);
   font-family: var(--sans);
   line-height: 1.6;
@@ -395,3 +395,119 @@ footer {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .etape { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   Activités
+   ============================================================ */
+.nav__liens { flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.3rem; }
+
+/* Cartes d'activités sur l'accueil */
+.activites { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.2rem; }
+.activite {
+  display: block;
+  padding: 1.6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  color: var(--fg);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.activite:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2); }
+.activite__icone { font-size: 2.2rem; color: var(--gold); }
+.activite h3 { font-family: var(--serif); margin: 0.4rem 0; }
+.activite p { margin: 0; color: var(--muted); }
+
+/* Panneau commun (quiz, test, mémoire) */
+.panneau {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(1.2rem, 4vw, 2.2rem);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(16, 24, 51, 0.7);
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+.panneau + .panneau { margin-top: 2rem; }
+.panneau > h2 { margin-bottom: 1.2rem; }
+
+/* Quiz */
+.quiz__progression { height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
+.quiz__progression span { display: block; height: 100%; background: var(--gold); transition: width 0.4s; }
+.quiz__compteur { color: var(--muted); font-size: 0.9rem; margin: 0.8rem 0 0; }
+.quiz__question { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.6rem); margin: 0.8rem 0 1.4rem; }
+.quiz__choix { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.7rem; margin-bottom: 1.2rem; }
+.choix {
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--fg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.choix:hover:not(:disabled) { border-color: var(--gold); background: rgba(212, 175, 55, 0.12); }
+.choix:disabled { cursor: default; opacity: 0.6; }
+.choix--bon { opacity: 1 !important; border-color: #4ade80; background: rgba(74, 222, 128, 0.15); }
+.choix--faux { opacity: 1 !important; border-color: #f87171; background: rgba(248, 113, 113, 0.15); }
+.quiz__info { min-height: 1.6em; color: var(--gold-light); margin: 0 0 1rem; }
+.resultat h3, .fiche h3 { font-family: var(--serif); font-size: 2.2rem; color: var(--gold); margin: 0.2rem 0; }
+.resultat__score { font-size: 3rem; font-weight: 700; margin: 0; }
+.resultat .btn, .fiche .btn { margin-top: 1rem; cursor: pointer; font: inherit; font-weight: 600; }
+
+/* Fiche « ton chevalier » */
+.fiche__symbole { font-size: 4.5rem; color: var(--gold); line-height: 1; filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)); }
+.fiche__tech { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; list-style: none; padding: 0; }
+.form-date { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; margin-bottom: 1rem; }
+.form-date input, .barre select {
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--fg);
+  font: inherit;
+  color-scheme: dark;
+}
+.form-date .btn, .barre .btn { cursor: pointer; font: inherit; font-weight: 600; }
+
+/* Jeu de mémoire */
+.barre { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.7rem; margin-bottom: 1rem; }
+.stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1.6rem; margin-bottom: 1.2rem; color: var(--muted); }
+.stats b { color: var(--gold-light); }
+.plateau { display: grid; grid-template-columns: repeat(var(--colonnes, 4), 1fr); gap: 0.6rem; max-width: 640px; margin: 0 auto; }
+.memo {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  perspective: 600px;
+  font: inherit;
+}
+.memo__face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+.memo__dos { background: linear-gradient(145deg, #1c2a5e, #0b1023); color: var(--gold); font-size: 1.6rem; }
+.memo__avant { background: linear-gradient(160deg, rgba(212, 175, 55, 0.25), #101833); color: var(--fg); transform: rotateY(180deg); }
+.memo__avant b { font-size: clamp(1.4rem, 5vw, 2.4rem); color: var(--gold); font-weight: 400; }
+.memo__avant small { font-size: clamp(0.6rem, 1.8vw, 0.8rem); margin-top: 0.2rem; }
+.memo.retournee .memo__dos { transform: rotateY(180deg); }
+.memo.retournee .memo__avant { transform: rotateY(360deg); }
+.memo.trouvee .memo__avant { border-color: var(--gold); box-shadow: 0 0 18px rgba(212, 175, 55, 0.5); }
+.memo:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 10px; }
+#message-memoire { min-height: 1.6em; color: var(--gold-light); margin: 1rem 0 0; }
+@media (max-width: 600px) { .plateau { --colonnes: 4 !important; } }
+.visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

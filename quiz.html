@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz — Chevaliers d'Or</title>
+  <meta name="description" content="Teste tes connaissances sur les Chevaliers d'Or et obtiens ton rang au Sanctuaire.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="etoiles" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">SANCTUAIRE</a>
+    <div class="nav__liens">
+      <a href="index.html">Les Chevaliers</a>
+      <a href="chronologie.html">Les Douze Maisons</a>
+      <a href="quiz.html" aria-current="page">Quiz</a>
+      <a href="memoire.html">Mémoire</a>
+      <a href="ton-chevalier.html">Ton Chevalier</a>
+    </div>
+  </nav>
+
+  <header class="hero hero--court">
+    <div>
+      <p class="hero__sur-titre">Épreuve du Sanctuaire</p>
+      <h1>Le Quiz des Chevaliers</h1>
+      <p class="hero__texte">Dix questions tirées au hasard. Ton score décidera de ton rang : simple apprenti ou digne du trône du Grand Pope ?</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="panneau" id="quiz"></div>
+  </main>
+
+  <footer>
+    Site de fan non officiel. <em>Les Chevaliers du Zodiaque</em> (Saint Seiya) © Masami Kurumada / Toei Animation.
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/activites.js"></script>
+</body>
+</html>

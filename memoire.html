@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeu de mémoire — Chevaliers d'Or</title>
+  <meta name="description" content="Retrouve les paires de Chevaliers d'Or en un minimum de coups.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="etoiles" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">SANCTUAIRE</a>
+    <div class="nav__liens">
+      <a href="index.html">Les Chevaliers</a>
+      <a href="chronologie.html">Les Douze Maisons</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="memoire.html" aria-current="page">Mémoire</a>
+      <a href="ton-chevalier.html">Ton Chevalier</a>
+    </div>
+  </nav>
+
+  <header class="hero hero--court">
+    <div>
+      <p class="hero__sur-titre">Mini-jeu</p>
+      <h1>Le Mémoire du Zodiaque</h1>
+      <p class="hero__texte">Retourne les cartes et retrouve les paires de signes en un minimum de coups. Ton meilleur score est gardé pour chaque niveau.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="panneau">
+      <div class="barre">
+        <label for="niveau">Niveau</label>
+        <select id="niveau">
+          <option value="4">Bronze — 4 paires</option>
+          <option value="6" selected>Argent — 6 paires</option>
+          <option value="12">Or — 12 paires</option>
+        </select>
+        <button class="btn" id="rejouer" type="button">Nouvelle partie</button>
+      </div>
+      <div class="stats">
+        <span>Coups : <b id="coups">0</b></span>
+        <span>Temps : <b id="temps">0s</b></span>
+        <span>Paires : <b id="paires">0</b></span>
+        <span>Record : <b id="record">—</b></span>
+      </div>
+      <div class="plateau" id="memoire"></div>
+      <p id="message-memoire" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <footer>
+    Site de fan non officiel. <em>Les Chevaliers du Zodiaque</em> (Saint Seiya) © Masami Kurumada / Toei Animation.
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/activites.js"></script>
+</body>
+</html>

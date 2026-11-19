@@ -10,10 +10,15 @@ const RACINE = __dirname;
 app.use("/css", express.static(path.join(RACINE, "css")));
 app.use("/js", express.static(path.join(RACINE, "js")));
 
-app.get(["/", "/index.html"], (req, res) => res.sendFile(path.join(RACINE, "index.html")));
-app.get(["/chronologie", "/chronologie.html"], (req, res) =>
-  res.sendFile(path.join(RACINE, "chronologie.html"))
-);
+// Pages du site (liste blanche)
+const PAGES = ["index", "chronologie", "quiz", "memoire", "ton-chevalier"];
+
+app.get("/", (req, res) => res.sendFile(path.join(RACINE, "index.html")));
+for (const page of PAGES) {
+  app.get([`/${page}`, `/${page}.html`], (req, res) =>
+    res.sendFile(path.join(RACINE, `${page}.html`))
+  );
+}
 
 // Page introuvable → retour à l'accueil
 app.use((req, res) => res.redirect("/"));

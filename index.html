@@ -18,6 +18,9 @@
     <div class="nav__liens">
       <a href="index.html" aria-current="page">Les Chevaliers</a>
       <a href="chronologie.html">Les Douze Maisons</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="memoire.html">Mémoire</a>
+      <a href="ton-chevalier.html">Ton Chevalier</a>
     </div>
   </nav>
 
@@ -47,6 +50,17 @@
     <div class="grille" id="grille"></div>
   </main>
 
+  <section class="section" id="activites">
+    <h2>Que veux-tu faire ?</h2>
+    <p class="section__intro">Explore le Sanctuaire, teste tes connaissances ou découvre quel chevalier sommeille en toi.</p>
+    <div class="activites">
+      <a class="activite" href="chronologie.html"><span class="activite__icone" aria-hidden="true">⌛</span><h3>Les Douze Maisons</h3><p>Revis la bataille du Sanctuaire, temple après temple.</p></a>
+      <a class="activite" href="quiz.html"><span class="activite__icone" aria-hidden="true">✦</span><h3>Le Quiz</h3><p>Dix questions pour obtenir ton rang, d'apprenti à Grand Pope.</p></a>
+      <a class="activite" href="memoire.html"><span class="activite__icone" aria-hidden="true">♈︎</span><h3>Le Mémoire</h3><p>Retrouve les paires de signes en trois niveaux de difficulté.</p></a>
+      <a class="activite" href="ton-chevalier.html"><span class="activite__icone" aria-hidden="true">☉</span><h3>Ton Chevalier</h3><p>Ta date de naissance ou un test de personnalité choisit ton gardien.</p></a>
+    </div>
+  </section>
+
   <dialog id="detail">
     <button class="fermer" type="button" aria-label="Fermer">×</button>
     <div class="detail">
@@ -72,5 +86,6 @@
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/activites.js"></script>
 </body>
 </html>
