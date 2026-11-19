@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Bataille des Douze Maisons — Chevaliers d'Or</title>
+  <meta name="description" content="Revivez l'ascension des Chevaliers de Bronze à travers les douze temples du Sanctuaire, en douze heures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="etoiles" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">SANCTUAIRE</a>
+    <div class="nav__liens">
+      <a href="index.html">Les Chevaliers</a>
+      <a href="chronologie.html" aria-current="page">Les Douze Maisons</a>
+    </div>
+  </nav>
+
+  <header class="hero hero--court">
+    <div>
+      <p class="hero__sur-titre">La Bataille du Sanctuaire</p>
+      <h1>Les Douze Maisons</h1>
+      <p class="hero__texte">Une flèche d'or dans le cœur, Athéna n'a que douze heures à vivre. Seiya, Shiryu, Hyoga, Shun et Ikki doivent traverser les douze temples pour atteindre le Grand Pope.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="horloge" aria-live="polite">
+      <div class="horloge__cadran" aria-hidden="true"></div>
+      <p></p>
+    </div>
+
+    <ol class="frise" id="frise"></ol>
+
+    <p style="text-align:center"><a class="btn" href="index.html#chevaliers">Revoir les Chevaliers d'Or</a></p>
+  </main>
+
+  <footer>
+    Site de fan non officiel. <em>Les Chevaliers du Zodiaque</em> (Saint Seiya) © Masami Kurumada / Toei Animation.
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

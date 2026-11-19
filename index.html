@@ -2,44 +2,75 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Chevaliers d’Or — Saint Seiya</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les Chevaliers d'Or — Les Chevaliers du Zodiaque</title>
+  <meta name="description" content="Les douze Chevaliers d'Or du Sanctuaire : signes, techniques et combats de la Bataille des Douze Maisons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Les Chevaliers d’Or</h1>
-    <p>Sous le signe des constellations, ils veillent.</p>
+  <canvas id="etoiles" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a class="nav__logo" href="index.html">SANCTUAIRE</a>
+    <div class="nav__liens">
+      <a href="index.html" aria-current="page">Les Chevaliers</a>
+      <a href="chronologie.html">Les Douze Maisons</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="roue" aria-hidden="true"></div>
+      <p class="hero__sur-titre">Les Chevaliers du Zodiaque</p>
+      <h1>Les Chevaliers d'Or</h1>
+      <p class="hero__texte">Gardiens des douze temples du Sanctuaire, ils sont l'élite de l'armée d'Athéna. Leur cosmos atteint le septième sens et leurs coups vont à la vitesse de la lumière.</p>
+      <a class="btn" href="#chevaliers">Découvrir les douze gardiens</a>
+    </div>
   </header>
 
-  <main>
-    <section id="intro">
-      <h2>Présentation</h2>
-      <p>Les Chevaliers d’Or sont les protecteurs du Sanctuaire, liés aux 12 constellations du Zodiaque.</p>
-    </section>
+  <main class="section" id="chevaliers">
+    <h2>Les Douze Gardiens</h2>
+    <p class="section__intro">Clique sur un chevalier pour découvrir son histoire, ses techniques et son rôle dans la Bataille du Sanctuaire.</p>
 
-    <section id="table">
-      <h2>Les Douze Maisons</h2>
-      <ul>
-        <li>Bélier — Mū</li>
-        <li>Taureau — Aldebaran</li>
-        <li>Gémeaux — Saga</li>
-        <li>Cancer — Deathmask</li>
-        <li>Lion — Aiolia</li>
-        <li>Vierge — Shaka</li>
-        <li>Balance — Dōko</li>
-        <li>Scorpion — Milo</li>
-        <li>Sagittaire — Aiolos</li>
-        <li>Capricorne — Shura</li>
-        <li>Verseau — Camus</li>
-        <li>Poissons — Aphrodite</li>
-      </ul>
-    </section>
+    <div class="filtres">
+      <input id="recherche" type="search" placeholder="Rechercher un nom, un signe, une technique…" aria-label="Rechercher">
+      <button class="filtre" data-element="Tous" aria-pressed="true">Tous</button>
+      <button class="filtre" data-element="Feu" aria-pressed="false">Feu</button>
+      <button class="filtre" data-element="Terre" aria-pressed="false">Terre</button>
+      <button class="filtre" data-element="Air" aria-pressed="false">Air</button>
+      <button class="filtre" data-element="Eau" aria-pressed="false">Eau</button>
+    </div>
+
+    <div class="grille" id="grille"></div>
   </main>
 
+  <dialog id="detail">
+    <button class="fermer" type="button" aria-label="Fermer">×</button>
+    <div class="detail">
+      <div class="detail__entete">
+        <span class="detail__symbole" aria-hidden="true"></span>
+        <div>
+          <h3></h3>
+          <p class="detail__alias"></p>
+        </div>
+      </div>
+      <h4>Qui est-il ?</h4>
+      <p class="detail__description"></p>
+      <h4>Techniques</h4>
+      <ul></ul>
+      <h4>Dans la Bataille du Sanctuaire</h4>
+      <p class="detail__combat"></p>
+    </div>
+  </dialog>
+
   <footer>
-    <p>© 2025 — Projet Chevaliers d’Or</p>
+    Site de fan non officiel. <em>Les Chevaliers du Zodiaque</em> (Saint Seiya) © Masami Kurumada / Toei Animation.
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
