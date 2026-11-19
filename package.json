@@ -1,0 +1,14 @@
+{
+  "name": "chevaliers-d-or",
+  "version": "1.0.0",
+  "description": "Site de fan sur les Chevaliers d'Or des Chevaliers du Zodiaque (Saint Seiya)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "vbenji23",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
