@@ -2,7 +2,7 @@
 
 Site de fan consacré aux douze Chevaliers d'Or du Sanctuaire, tirés de la série *Les Chevaliers du Zodiaque* (*Saint Seiya*).
 
-🔗 **Démo en ligne :** https://vbenji23.github.io/Chevaliers-d-or-/
+🔗 **Démo en ligne :**  https://vbenji23.github.io/chevaliers-d-or-/
 
 ## ✨ Fonctionnalités
 
